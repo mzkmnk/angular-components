@@ -5,20 +5,20 @@ import { Aura } from 'primeng/themes/aura';
 import { MessagesComponent } from './components/messages/messages.component';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet,MessagesComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+	selector: 'app-root',
+	standalone: true,
+	imports: [RouterOutlet, MessagesComponent],
+	templateUrl: './app.component.html',
+	styleUrl: './app.component.css',
 })
 export class AppComponent {
-  private primeNgConfig = inject(PrimeNGConfig);
+	private primeNgConfig = inject(PrimeNGConfig);
 
-  constructor(){
-    this.primeNgConfig.theme.set({preset:Aura})
-  }
+	constructor() {
+		this.primeNgConfig.theme.set({ preset: Aura });
+	}
 
-  ngOnInit() {
-    this.primeNgConfig.ripple.set(true);
-}
+	ngOnInit() {
+		this.primeNgConfig.ripple.set(true);
+	}
 }
